@@ -1,0 +1,210 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('fonts/Merriweather-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('fonts/Merriweather-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('fonts/RobotoSlab-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('fonts/RobotoSlab-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* General Setup */
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 10px; /* Site-wide base font-size */
+  line-height: 1.6; /* Suitable line-height for readability */
+}
+
+/* Heading Styles */
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem; /* Equivalent to 30px */
+  text-align: center; /* Center the top-level heading */
+  margin-top: 20px; /* Add top margin for spacing */
+  letter-spacing: 1px; /* Slight spacing for better readability */
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem; /* Equivalent to 25px */
+  letter-spacing: 1px; /* Slight spacing for better readability */
+}
+
+/* Body Text */
+p {
+  font-size: 1.6rem; /* Equivalent to 16px based on 10px base */
+  line-height: 1.6; /* Maintain readability */
+  letter-spacing: 0.5px; /* Add spacing between letters */
+  word-spacing: 1px; /* Add spacing between words */
+}
+
+/* First Paragraph Indentation */
+section > h1 + p,
+section > h2 + p {
+  text-indent: 20px; /* Indent the first paragraph after headings */
+}
+
+/* Link Styles */
+a {
+  color: #a66; /* Base color for links */
+  text-decoration: underline; /* Underlined by default */
+}
+
+a:visited {
+  color: #804d4d; /* Darker shade for visited links */
+}
+
+a:hover,
+a:focus {
+  color: #b77b7b; /* Slightly lighter color on hover/focus */
+  text-decoration: none; /* Remove underline on hover/focus */
+  outline: none; /* Remove default focus outline */
+}
+
+a:active {
+  color: #5a2e2e; /* Darker, bold color for active state */
+  background-color: #f2e1e1; /* Subtle background color */
+  border-bottom: 2px solid #a66; /* Add a bottom border for emphasis */
+  text-decoration: none; /* Keep the underline removed */
+}
+
+/* Remove focus outline from all links globally */
+a:focus {
+  outline: none;
+}
+
+/* Add external link icon for external links */
+a[href^="http"]::after {
+  content: '';
+  display: inline-block; /* Keep the icon in the same line */
+  background: url('external-link-52.png') no-repeat center;
+  background-size: contain; /* Resize to fit within the dimensions */
+  width: 5px; /* Adjust width */
+  height: 5px; /* Adjust height */
+  margin-left: 2px; /* Space between the text and icon */
+  vertical-align: middle; /* Align with the middle of the text */
+}
+
+/* General List Styling */
+ul {
+  margin-top: 1.6rem;  /* Match spacing above paragraphs */
+  margin-bottom: 1.6rem;  /* Match spacing below paragraphs */
+  padding-left: 20px;  /* Add padding to left side for bullets */
+}
+
+li {
+  font-size: 1.6rem;  /* Same font size as paragraphs */
+  line-height: 1.6;  /* Same line height as paragraphs */
+  letter-spacing: 0.5px;  /* Same letter-spacing as paragraphs */
+  word-spacing: 1px;  /* Same word-spacing as paragraphs */
+  margin-bottom: 0.8rem;  /* Optional: Slight spacing between list items */
+}
+
+/* Navigation Menu */
+nav {
+  background-color: #f9f9f9;  /* Light background color */
+  border-top: 5px solid #a66;  /* Border matching the header/footer */
+  border-bottom: 5px solid #a66;  /* Visual separation */
+  padding: 15px 0;  /* Top and bottom padding */
+  text-align: center;  /* Center the menu */
+}
+
+/* Unordered List */
+nav ul {
+  list-style-type: none;  /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+/* List Items */
+nav ul li {
+  display: inline-block;  /* Inline layout for list items */
+  margin: 0;  /* Space between items */
+}
+
+/* Links styled as buttons */
+nav ul li a {
+  
+  display: inline-block;  /* Allows width and height properties */
+  color: #a66;  /* Primary color for text */
+  font-family: 'Roboto Slab', serif;  /* Font for consistency */
+  font-size: 1.6rem;  /* Text size */
+  text-decoration: none;  /* Remove underlines */
+  padding: 0;  /* Remove default padding */
+  width: 200px;  /* Fixed width */
+  height: 100px;  /* Fixed height */
+  line-height: 100px;  /* Center text vertically */
+  text-align: center;  /* Center text horizontally */
+  border: 2px solid #a66;  /* Border to define button shape */
+  border-radius: 0%;  /* Rounded corners */
+  background-color: transparent;  /* Initial transparent background */
+  margin: 35px;  /* Space between items */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+/* Hover and Focus states */
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #a66;  /* Background changes on hover */
+  color: #fff;  /* White text for contrast */
+  cursor: pointer;  /* Pointer to indicate clickable */
+}
